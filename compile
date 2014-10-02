@@ -1,0 +1,4 @@
+gfortran-4.5 -O -c cnvmod.f90
+gfortran-4.5  -c -I/usr/include cnv2nc.f90
+
+gfortran-4.5 -o cnvnc -I/usr/include *.o -L/usr/lib64 -lnetcdf -lnetcdff -lm

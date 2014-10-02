@@ -31,11 +31,11 @@
   integer ::iolst=10, icnv=11, ocnv=12, stdout=6
   real, allocatable :: buff(:)
   
-  include '/usr/local/include/netcdf.inc'
+  include 'netcdf.inc'
   integer           :: ncid, status
   integer           :: latdim, londim, presdim, vardims(4),rinfdims(3), timedim
   integer           :: latid, lonid, presid, timeid
-  integer, allocatable :: varid(:), rinfid(:)
+  integer, allocatable :: varid(:), rinfid(:), cinfid(:)
   character*255     :: title  
   character*10      :: name  
 !-----------------------------------------------------------------------
@@ -126,6 +126,7 @@
 !       Ein File ist fertig
 !-----------------------------------------------------------------------
     status = nf_close(ncid)
+10  continue
     close(icnv)
     deallocate(varid)      
     deallocate(rinfid)

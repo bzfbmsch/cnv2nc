@@ -1,4 +1,6 @@
-gfortran-4.5 -O -c cnvmod.f90
-gfortran-4.5  -c -I/usr/include cnv2nc.f90
+#!/bin/bash
+NETCDF=/sw/data/netcdf/4.3.2
+gfortran -O -c cnvmod.F90
+gfortran  -c -I$NETCDF/include cnv2nc.F90
 
-gfortran-4.5 -o cnvnc -I/usr/include *.o -L/usr/lib64 -lnetcdf -lnetcdff -lm
+gfortran -o cnvnc *.o -L$NETCDF/lib64 -lnetcdf -lnetcdff -lm

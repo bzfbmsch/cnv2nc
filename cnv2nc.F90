@@ -33,8 +33,10 @@
   
   include 'netcdf.inc'
   integer           :: ncid, status
-  integer           :: latdim, londim, presdim, vardims(4),rinfdims(3), timedim
   integer           :: latid, lonid, presid, timeid
+  integer           :: latdim, londim, presdim, timedim
+  integer           :: vardims(4),rinfdims(3)
+  real              :: textax(256)
   integer, allocatable :: varid(:), rinfid(:), cinfid(:)
   character*255     :: title  
   character*10      :: name  

@@ -149,7 +149,7 @@
         write(stdout,*) i,' :',trim(varshorttmp(i)), trim(varnametmp(i)),' [',trim(varunittmp(i)),']'
       enddo
       write(stdout,*) 'The file contains ', nvalues,' data lines!'
-!     Test, ob benÃ¶tigte Variable gefunden wurden
+!     Test, ob benötigte Variable gefunden wurden
       if (nquan.ne.ivar) then
         write(stdout,*)'Something is wrong with the number of variables!'
 	write(stdout,*)'nquan =  ',nquan,' but ',ivar,' variables found!'
@@ -357,9 +357,9 @@
       else
         varunittmp(ivar) = ''
       endif
-! remove "/" and  "Ã©"     
-      do while (index(varshorttmp(ivar),"Ã©").ne.0) 
-        isunit = index(varshorttmp(ivar),"Ã©") 
+! remove "/" and  "é"     
+      do while (index(varshorttmp(ivar),"é").ne.0) 
+        isunit = index(varshorttmp(ivar),"é") 
         ieunit = len_trim(varshorttmp(ivar))
         varshorttmp(ivar) = varshorttmp(ivar)(1:isunit-1)//'t'//varshorttmp(ivar)(isunit+1:ieunit)
       enddo

@@ -1,5 +1,5 @@
 #!/bin/bash
-#NETCDF=$1
+NETCDF=$1
 #NETCDF=/sw/data/netcdf/4.3.2
 gfortran -O -c cnvmod.F90
 gfortran  -c -I$NETCDF/include cnv2nc.F90
